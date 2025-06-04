@@ -2,3 +2,4 @@
 basemodel/basemodel
 basemodel/wandb
 logs/
+campedui-codegen/wandb
