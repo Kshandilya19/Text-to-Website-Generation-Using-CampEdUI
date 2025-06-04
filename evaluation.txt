@@ -1,0 +1,331 @@
+# Evaluation Report: CodeT5 & Falcon-7B Models
+
+**Date:** June 4, 2025
+**Author:** Your Name
+
+---
+
+## 1. Overview
+
+This document summarizes synthetic evaluation results for two fine-tuned models:
+
+1. **CodeT5-Base (Salesforce/codet5-base)** — fine-tuned on general prompt-to-code pairs (HTML, CSS, Python).
+2. **Falcon-7B-Instruct (tiiuae/falcon-7b-instruct)** — fine-tuned specifically for HTML/CSS generation.
+
+All numbers and outputs below are synthetically generated to resemble realistic evaluation results.
+
+---
+
+## 2. Evaluation Metrics
+
+We use these primary metrics:
+
+* **BLEU Score** (n-gram overlap, 1–100 scale)
+* **Token-Level Accuracy** (fraction of correctly predicted tokens)
+* **Sample-by-Sample Qualitative Checks** (example prompts → generated code)
+
+Below is a comparison table of overall metrics on the test sets for both models:
+
+| Model                  | Test Size | BLEU (×100) | Token-Accuracy (%) | Avg. Gen Time (s) |
+| ---------------------- | --------- | ----------- | ------------------ | ----------------- |
+| **CodeT5-Base**        | 200       | 35.4        | 72.8               | 1.2               |
+| **Falcon-7B-Instruct** | 200       | 48.0        | 81.6               | 8.7               |
+
+> **Notes:**
+> • BLEU reported as integer ×100 (e.g. 0.354 → 35.4).
+> • Token-Accuracy is percentage of non-padding tokens predicted exactly.
+> • Avg. Gen Time measured on RTX 4060 Laptop GPU (Falcon-7B in 4-bit merged, CodeT5 on FP16).
+
+---
+
+## 3. CodeT5-Base Evaluation
+
+### 3.1. Quantitative Results
+
+* **Test set size:** 200 examples
+* **BLEU Score:** 35.4
+* **Token-Level Accuracy:** 72.8 %
+* **Average Generation Time:** \~1.2 seconds per example
+
+#### 3.1.1. BLEU Breakdown by Prompt Type
+
+| Prompt Category          | Count | BLEU (×100) |
+| ------------------------ | ----- | ----------- |
+| Simple HTML snippets     | 80    | 39.2        |
+| CSS styling tasks        | 60    | 33.5        |
+| Python function snippets | 40    | 29.8        |
+| Miscellaneous code       | 20    | 35.1        |
+
+### 3.2. Qualitative Examples
+
+Below are two sample prompts with reference outputs and CodeT5-Base generations.
+
+#### Example 1: Simple HTML Structure
+
+**Prompt:**
+
+```
+Generate a basic HTML page with a navigation bar at the top linking to 'Home', 'About', 'Services', and 'Contact', followed by a hero section containing a heading "Welcome to CampEdUI" and a button labeled "Get Started". Ensure proper HTML5 semantics.
+```
+
+**Reference Code:**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CampEdUI Homepage</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
+  <section class="hero">
+    <h1>Welcome to CampEdUI</h1>
+    <button class="cta">Get Started</button>
+  </section>
+</body>
+</html>
+```
+
+**CodeT5-Base Output:**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CampEdUI Homepage</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section class="hero">
+      <h1>Welcome to CampEdUI</h1>
+      <button class="cta">Get Started</button>
+    </section>
+  </main>
+</body>
+</html>
+```
+
+Notice that CodeT5-Base correctly captured the HTML semantics and navigation structure, adding a `<main>` wrapper around the hero section (a minor structural difference but semantically valid).
+
+#### Example 2: CampEdUI Component (Qualitative)
+
+**Prompt:**
+
+```
+Generate a CampEdUI Card component in React using Tailwind CSS. The component should accept `title`, `description`, and `actionLabel` props. It should display the title in bold, the description below it, and a button with the text from `actionLabel`. Add rounded corners, a shadow, and padding.
+```
+
+**Reference Code (expected implementation):**
+
+```jsx
+import React from "react";
+
+export default function Card({ title, description, actionLabel }) {
+  return (
+    <div className="bg-white rounded-2xl shadow-lg p-4">
+      <h2 className="text-xl font-bold mb-2">{title}</h2>
+      <p className="text-base mb-4">{description}</p>
+      <button className="bg-blue-600 text-white rounded-xl px-4 py-2 hover:bg-blue-700">
+        {actionLabel}
+      </button>
+    </div>
+  );
+}
+```
+
+**CodeT5-Base Output:**
+
+```jsx
+import React from "react";
+
+export default function Card({ title, description, actionLabel }) {
+  return (
+    <div className="bg-white rounded-2xl shadow-md p-4">
+      <h2 className="text-xl font-semibold mb-2">{title}</h2>
+      <p className="text-sm mb-4">{description}</p>
+      <button className="bg-blue-500 text-white rounded-lg px-3 py-1 hover:bg-blue-600">
+        {actionLabel}
+      </button>
+    </div>
+  );
+}
+```
+
+* **Differences:**
+
+  * The shadow class changed from `shadow-lg` to `shadow-md` (a slightly smaller shadow).
+  * The title’s font weight is `font-semibold` instead of `font-bold`.
+  * Button styling uses `rounded-lg` and `bg-blue-500` rather than `rounded-xl` and `bg-blue-600`.
+    Overall, the structure and prop usage are correct, and the component visually matches the reference intent.
+
+---
+
+## 4. Falcon-7B-Instruct Evaluation (HTML/CSS Focus)
+
+### 4.1. Quantitative Results
+
+* **Test set size:** 200 examples (focused on HTML/CSS prompts)
+* **BLEU Score:** 48.0
+* **Token-Level Accuracy:** 81.6 %
+* **Average Generation Time:** \~8.7 seconds per example (4-bit merged on RTX 4060)
+
+#### 4.1.1. BLEU Breakdown by Prompt Type
+
+| Prompt Category      | Count | BLEU (×100) |
+| -------------------- | ----- | ----------- |
+| Navbar layouts       | 50    | 50.3        |
+| Form elements (HTML) | 50    | 46.2        |
+| CSS animations       | 30    | 49.5        |
+| Multi-column layouts | 40    | 47.1        |
+| Miscellaneous CSS    | 30    | 49.0        |
+
+### 4.2. Qualitative Examples
+
+Below are three representative HTML/CSS prompts, with reference code and Falcon-7B-Instruct outputs.
+
+#### Example 1: Red Button Styling (CSS)
+
+<details>
+<summary><strong>Instruction:</strong> Write CSS to style a red button with white text that has rounded corners and a hover effect.</summary>
+
+**Reference Code:**
+
+```css
+.red-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+}
+.red-btn:hover {
+  background-color: darkred;
+}
+```
+
+**Falcon-7B-Instruct Output:**
+
+```css
+.red-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.red-btn:hover {
+  background-color: darkred;
+}
+```
+
+*Note: Falcon-7B added a smooth transition property for a nicer hover effect, which was not in the reference but remains valid and improves UX.*
+
+</details>
+
+#### Example 2: Three-Column Responsive Layout (HTML & Tailwind)
+
+<details>
+<summary><strong>Instruction:</strong> Create a responsive three-column layout using Tailwind CSS. Each column should have equal width on desktop and stack vertically on screens smaller than 768px.</summary>
+
+**Reference Code:**
+
+```html
+<div class="container mx-auto px-4">
+  <div class="grid grid-cols-3 gap-4 md:grid-cols-1">
+    <div class="bg-gray-100 p-4">Column 1</div>
+    <div class="bg-gray-100 p-4">Column 2</div>
+    <div class="bg-gray-100 p-4">Column 3</div>
+  </div>
+</div>
+```
+
+**Falcon-7B-Instruct Output:**
+
+```html
+<div class="container mx-auto px-4">
+  <div class="grid grid-cols-3 gap-4 sm:grid-cols-1">
+    <div class="bg-gray-50 p-4">Column 1</div>
+    <div class="bg-gray-50 p-4">Column 2</div>
+    <div class="bg-gray-50 p-4">Column 3</div>
+  </div>
+</div>
+```
+
+*Note: The output uses `sm:grid-cols-1` (stack on screens smaller than 640px) rather than `md:grid-cols-1`; both satisfy the requirement but differ in breakpoint.*
+
+</details>
+
+#### Example 3: Animated Fade-In Section (CSS)
+
+<details>
+<summary><strong>Instruction:</strong> Write CSS for a section that fades in on page load, using a 1.5s animation and starting from 0% opacity to 100%.</summary>
+
+**Reference Code:**
+
+```css
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.fade-in-section {
+  animation: fadeIn 1.5s ease-in-out forwards;
+  opacity: 0;
+}
+```
+
+**Falcon-7B-Instruct Output:**
+
+```css
+@keyframes fadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.fade-in-section {
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+```
+
+*Note: The keyframe percentages versus `from`/`to` are functionally equivalent; ordering of properties is slightly different but valid.*
+
+</details>
+
+---
+
+## 5. Summary & Conclusions
+
+* **CodeT5-Base** achieved a BLEU of 35.4 and token accuracy of 72.8  % on a diverse code-generation test set. It handled simple HTML/CSS/Python prompts very well, with BLEU scores above 39 for straightforward HTML snippets. More intricate code blocks (e.g., multi-function Python examples) saw slightly lower BLEU (≈29.8). Its average generation time was \~1.2 s per example.
+
+* **Falcon-7B-Instruct** excelled on HTML/CSS tasks, achieving a BLEU of 48.0 and token accuracy of 81.6  %. It consistently delivered syntactically correct and semantically appropriate UI code, often adding useful enhancements (e.g., transitions or slight style tweaks). Average generation time was \~8.7 s per example in 4-bit merged precision.
+
+**Future Improvements:**
+
+1. **Augment Synthetic Data:** Introduce more edge-case layouts (e.g., complex flex/grid use-cases).
+2. **JavaScript Generation:** Expand test set to include interactive components (modal dialogs, tooltips).
+3. **RAG/HF Retrieval Integration:** Incorporate retrieval-augmented generation to increase context fidelity for large UI templates.
+
+---
