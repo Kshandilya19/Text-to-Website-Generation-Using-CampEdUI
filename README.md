@@ -30,20 +30,6 @@ Uses PEFT (Parameter-Efficient Fine-Tuning) or LoRA for resource-efficient train
 
 To fine-tune the models effectively, synthetic training data was created using a combination of manual curation and semi-automated prompt generation techniques.
 
-✅ Data Structure
-Each sample in the dataset is a dictionary with two key fields:
-
-For CodeT5:
-{
-  "prompt": "Create a basic HTML page with a centered heading.",
-  "code": "<!DOCTYPE html>\n<html>\n<head><title>Sample</title></head>\n<body><h1 style='text-align:center;'>Welcome</h1></body>\n</html>"
-}
-
-For Falcon-7B (instruction format):
-{
-  "instruction": "Write CSS to style a card with a shadow and rounded corners.",
-  "response": ".card { box-shadow: 0px 4px 8px rgba(0,0,0,0.2); border-radius: 10px; padding: 20px; }"
-}
 Prompt Templates:
 A set of predefined templates was used to generate variations. 
 Examples:
