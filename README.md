@@ -38,31 +38,26 @@ For CodeT5:
   "prompt": "Create a basic HTML page with a centered heading.",
   "code": "<!DOCTYPE html>\n<html>\n<head><title>Sample</title></head>\n<body><h1 style='text-align:center;'>Welcome</h1></body>\n</html>"
 }
+
 For Falcon-7B (instruction format):
 {
   "instruction": "Write CSS to style a card with a shadow and rounded corners.",
   "response": ".card { box-shadow: 0px 4px 8px rgba(0,0,0,0.2); border-radius: 10px; padding: 20px; }"
 }
 Prompt Templates:
-A set of predefined templates was used to generate variations. Examples:
-
+A set of predefined templates was used to generate variations. 
+Examples:
 "Build a [component] with [style]."
-
 "Write HTML for a [UI element] that is [aligned / colored]."
 
 Code Snippet Bank:
 Commonly used HTML/CSS/Python code patterns were stored and reused in different combinations to increase variety and realism.
-
 Randomization:
 Element names (e.g., div, button, form) and style properties (color, alignment, font-size) were randomly swapped to create hundreds of diverse pairs.
-
 Manual Review:
 After generation, samples were reviewed and cleaned to ensure syntactic correctness and prompt-code alignment.
-
 Dataset Format:
 The resulting synthetic datasets were saved as .json files:
-
 train_prompts.json, val_prompts.json for CodeT5
 
-falcon_dataset.json for Falcon-7B
 
