@@ -1,0 +1,4 @@
+.venv/
+basemodel/basemodel
+basemodel/wandb
+logs/

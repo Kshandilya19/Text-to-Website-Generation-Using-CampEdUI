@@ -1,0 +1,9 @@
+transformers>=4.30.0
+datasets
+torch
+accelerate
+streamlit
+gradio
+black
+flake8
+playwright

@@ -1,0 +1,932 @@
+[
+  {
+    "component": "Accordion",
+    "section": "Usage",
+    "prompt": "On a FAQ page, import CampEdUI’s Accordion and render it so that only one panel can be expanded at a time—include the import statement and a simple accordion with two items."
+  },
+  {
+    "component": "Alert",
+    "section": "Usage",
+    "prompt": "In a user-settings form, show a non-destructive Alert at the top with a blue info icon and a close button; include the import and minimal JSX."
+  },
+  {
+    "component": "Alert",
+    "section": "Examples → Default",
+    "prompt": "When a profile update succeeds, display a default Alert in green that says “Profile saved”; show the import and JSX required."
+  },
+  {
+    "component": "Alert",
+    "section": "Examples → Destructive",
+    "prompt": "If a user tries to delete their account, render a destructive Alert in red that warns “This action is irreversible”; include import and JSX."
+  },
+  {
+    "component": "Aspect Ratio",
+    "section": "Usage",
+    "prompt": "Embed a 16:9 YouTube video responsively in a blog post using CampEdUI’s AspectRatio; include the import and the JSX for an iframe inside an AspectRatio container."
+  },
+  {
+    "component": "Avatar",
+    "section": "Usage",
+    "prompt": "For a chat header, render a circular Avatar with a user image; if no image is provided, show the user’s initials—include the import and JSX."
+  },
+  {
+    "component": "Badge",
+    "section": "Usage",
+    "prompt": "On a notification dropdown, display a small Badge with text “3” in red; include the import and a `<Badge>` wrapped around the number."
+  },
+  {
+    "component": "Badge",
+    "section": "Usage → Link",
+    "prompt": "Create a link-styled Badge that wraps an anchor to `/profile`, using CampEdUI’s `badgeVariants`; include the import and the JSX for `<Badge asChild><Link …>`."
+  },
+  {
+    "component": "Badge",
+    "section": "Examples → Default",
+    "prompt": "Render a default Badge labeled “New” next to a product name; show the import and `<Badge>New</Badge>` JSX."
+  },
+  {
+    "component": "Badge",
+    "section": "Examples → Secondary",
+    "prompt": "When tagging a secondary feature, render a Badge with variant=`\"secondary\"` reading “Beta”; include import and JSX."
+  },
+  {
+    "component": "Badge",
+    "section": "Examples → Outline",
+    "prompt": "Display an outlined Badge labeled “Pro” for premium users; include import and `<Badge variant=\"outline\">Pro</Badge>` JSX."
+  },
+  {
+    "component": "Badge",
+    "section": "Examples → Destructive",
+    "prompt": "If a user action is critical, show a destructive Badge with text “Remove” in red; include import and `<Badge variant=\"destructive\">Remove</Badge>`."
+  },
+  {
+    "component": "Bento Grid",
+    "section": "Usage",
+    "prompt": "Build a three-column dashboard layout using `<BentoGrid>` with `<BentoGridItem>` children; include the import and basic JSX structure."
+  },
+  {
+    "component": "Bento Grid",
+    "section": "Examples → Populated with Header and Content",
+    "prompt": "Create a `<BentoGrid>` where each item shows a header above some content, like “Sales” and “$12,000”; include import and complete JSX for a 3-item grid."
+  },
+  {
+    "component": "Bento Grid",
+    "section": "Examples → 2 Column Grid",
+    "prompt": "In a gallery page, render a 2-column layout using `<BentoGrid columns={2}>` with two `<BentoGridItem>` blocks; include import and JSX."
+  },
+  {
+    "component": "Breadcrumb",
+    "section": "Usage",
+    "prompt": "On a product detail page, display a breadcrumb like Home / Shop / Sneakers; include the import and JSX for `<Breadcrumb>` with three items."
+  },
+  {
+    "component": "Breadcrumb",
+    "section": "Examples → Custom separator",
+    "prompt": "Render a `<Breadcrumb>` that uses “>” as a custom separator between items; include import and `<Breadcrumb separator=“>”>` JSX."
+  },
+  {
+    "component": "Breadcrumb",
+    "section": "Examples → Variants",
+    "prompt": "Show how to render Breadcrumb links in uppercase variant for a category menu; include import and appropriate JSX."
+  },
+  {
+    "component": "Breadcrumb",
+    "section": "Examples → Orientation",
+    "prompt": "Implement a vertical `Breadcrumb` in a sidebar listing, instead of the default horizontal—include import and `orientation=\"vertical\"` example."
+  },
+  {
+    "component": "Breadcrumb",
+    "section": "Examples → BreadCrumb Active Item",
+    "prompt": "Render a breadcrumb where the last item is shown as active (non-clickable); include import and the JSX for active link styling."
+  },
+  {
+    "component": "Breadcrumb",
+    "section": "Examples → Dropdown",
+    "prompt": "Show a breadcrumb that collapses middle items into a dropdown when space is tight; include import and full JSX."
+  },
+  {
+    "component": "Breadcrumb",
+    "section": "Examples → Collapsed",
+    "prompt": "When only two items fit, collapse intermediate links into “…”—render a collapsed Breadcrumb with import and JSX."
+  },
+  {
+    "component": "Breadcrumb",
+    "section": "Examples → Link component",
+    "prompt": "Use a React Router `<Link>` inside each `<BreadcrumbItem>` instead of a standard anchor; include import and JSX showing `<Breadcrumb asChild><Link …>`."
+  },
+  {
+    "component": "Breadcrumb",
+    "section": "Examples → Responsive",
+    "prompt": "Build a breadcrumb that automatically truncates on smaller screens; include import and `Breadcrumb` JSX with responsive behavior."
+  },
+  {
+    "component": "Button",
+    "section": "Usage",
+    "prompt": "On a signup form, render a primary Button labeled “Sign Up” that spans the full width of the form; include import and `<Button variant=\"primary\" fullWidth>` JSX."
+  },
+  {
+    "component": "Button",
+    "section": "Link",
+    "prompt": "Show how to create a link-styled Button that navigates to “/login” using Next.js `<Link>`—include import and `<Button asChild><Link href=\"/login\">Login</Link></Button>`."
+  },
+  {
+    "component": "Button",
+    "section": "Examples → Primary",
+    "prompt": "In a form where you need a primary Button, use CampEdUI’s Button component with the 'primary' variant. Include the import and the JSX markup for a standalone primary Button."
+  },
+  {
+    "component": "Button",
+    "section": "Examples → Secondary",
+    "prompt": "In a form where you need a secondary Button, use CampEdUI’s Button component with the 'secondary' variant. Include the import and the JSX markup for a standalone secondary Button."
+  },
+  {
+    "component": "Button",
+    "section": "Examples → Destructive",
+    "prompt": "In a form where you need a destructive Button, use CampEdUI’s Button component with the 'destructive' variant. Include the import and the JSX markup for a standalone destructive Button."
+  },
+  {
+    "component": "Button",
+    "section": "Examples → Outline",
+    "prompt": "In a form where you need a outline Button, use CampEdUI’s Button component with the 'outline' variant. Include the import and the JSX markup for a standalone outline Button."
+  },
+  {
+    "component": "Button",
+    "section": "Examples → Ghost",
+    "prompt": "In a form where you need a ghost Button, use CampEdUI’s Button component with the 'ghost' variant. Include the import and the JSX markup for a standalone ghost Button."
+  },
+  {
+    "component": "Button",
+    "section": "Examples → Link",
+    "prompt": "In a form where you need a link Button, use CampEdUI’s Button component with the 'link' variant. Include the import and the JSX markup for a standalone link Button."
+  },
+  {
+    "component": "Button",
+    "section": "Examples → Icon",
+    "prompt": "In a form where you need a icon Button, use CampEdUI’s Button component with the 'icon' variant. Include the import and the JSX markup for a standalone icon Button."
+  },
+  {
+    "component": "Button",
+    "section": "Examples → With Icon",
+    "prompt": "In a form where you need a with icon Button, use CampEdUI’s Button component with the 'with icon' variant. Include the import and the JSX markup for a standalone with icon Button."
+  },
+  {
+    "component": "Button",
+    "section": "Examples → Loading",
+    "prompt": "In a form where you need a loading Button, use CampEdUI’s Button component with the 'loading' variant. Include the import and the JSX markup for a standalone loading Button."
+  },
+  {
+    "component": "Button",
+    "section": "Examples → As Child",
+    "prompt": "In a form where you need a as child Button, use CampEdUI’s Button component with the 'as child' variant. Include the import and the JSX markup for a standalone as child Button."
+  },
+  {
+    "component": "Card",
+    "section": "Usage",
+    "prompt": "In your React app, import the Card component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Carousel",
+    "section": "Usage",
+    "prompt": "In your React app, import the Carousel component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Carousel",
+    "section": "Examples → Sizes",
+    "prompt": "In a form where you need a sizes Carousel, use CampEdUI’s Carousel component with the 'sizes' variant. Include the import and the JSX markup for a standalone sizes Carousel."
+  },
+  {
+    "component": "Carousel",
+    "section": "Examples → Spacing",
+    "prompt": "In a form where you need a spacing Carousel, use CampEdUI’s Carousel component with the 'spacing' variant. Include the import and the JSX markup for a standalone spacing Carousel."
+  },
+  {
+    "component": "Carousel",
+    "section": "Examples → Slider",
+    "prompt": "In a form where you need a slider Carousel, use CampEdUI’s Carousel component with the 'slider' variant. Include the import and the JSX markup for a standalone slider Carousel."
+  },
+  {
+    "component": "Carousel",
+    "section": "Examples → Orientation",
+    "prompt": "In a form where you need a orientation Carousel, use CampEdUI’s Carousel component with the 'orientation' variant. Include the import and the JSX markup for a standalone orientation Carousel."
+  },
+  {
+    "component": "Carousel",
+    "section": "Examples → Orientation with Container",
+    "prompt": "In a form where you need a orientation with container Carousel, use CampEdUI’s Carousel component with the 'orientation with container' variant. Include the import and the JSX markup for a standalone orientation with container Carousel."
+  },
+  {
+    "component": "Carousel",
+    "section": "Examples → Indicator",
+    "prompt": "In a form where you need a indicator Carousel, use CampEdUI’s Carousel component with the 'indicator' variant. Include the import and the JSX markup for a standalone indicator Carousel."
+  },
+  {
+    "component": "Collapsible",
+    "section": "Usage",
+    "prompt": "In your React app, import the Collapsible component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Command",
+    "section": "Usage",
+    "prompt": "In your React app, import the Command component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Command",
+    "section": "Examples → Dialog",
+    "prompt": "In a form where you need a dialog Command, use CampEdUI’s Command component with the 'dialog' variant. Include the import and the JSX markup for a standalone dialog Command."
+  },
+  {
+    "component": "Context Menu",
+    "section": "Usage",
+    "prompt": "In your React app, import the Context Menu component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Data Table",
+    "section": "Reusable Components → Column header",
+    "prompt": "Create a Data Table example for the 'Column header' scenario using CampEdUI. Include any necessary imports and the minimal JSX to render it."
+  },
+  {
+    "component": "Data Table",
+    "section": "Reusable Components → Pagination",
+    "prompt": "Create a Data Table example for the 'Pagination' scenario using CampEdUI. Include any necessary imports and the minimal JSX to render it."
+  },
+  {
+    "component": "Data Table",
+    "section": "Reusable Components → Column toggle",
+    "prompt": "Create a Data Table example for the 'Column toggle' scenario using CampEdUI. Include any necessary imports and the minimal JSX to render it."
+  },
+  {
+    "component": "Dropdown Menu",
+    "section": "Usage",
+    "prompt": "In your React app, import the Dropdown Menu component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Dropdown Menu",
+    "section": "Examples → Checkboxes",
+    "prompt": "In a form where you need a checkboxes Dropdown Menu, use CampEdUI’s Dropdown Menu component with the 'checkboxes' variant. Include the import and the JSX markup for a standalone checkboxes Dropdown Menu."
+  },
+  {
+    "component": "Dropdown Menu",
+    "section": "Examples → Radio Group",
+    "prompt": "In a form where you need a radio group Dropdown Menu, use CampEdUI’s Dropdown Menu component with the 'radio group' variant. Include the import and the JSX markup for a standalone radio group Dropdown Menu."
+  },
+  {
+    "component": "Form",
+    "section": "Usage",
+    "prompt": "In your React app, import the Form component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Hover Card",
+    "section": "Usage",
+    "prompt": "In your React app, import the Hover Card component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Label",
+    "section": "Usage",
+    "prompt": "In your React app, import the Label component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Menubar",
+    "section": "Usage",
+    "prompt": "In your React app, import the Menubar component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Navigation Menu",
+    "section": "Usage",
+    "prompt": "In your React app, import the Navigation Menu component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Navigation Menu",
+    "section": "Examples → Link Component",
+    "prompt": "In a form where you need a link component Navigation Menu, use CampEdUI’s Navigation Menu component with the 'link component' variant. Include the import and the JSX markup for a standalone link component Navigation Menu."
+  },
+  {
+    "component": "Pagination",
+    "section": "Usage",
+    "prompt": "In your React app, import the Pagination component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Progress",
+    "section": "Usage",
+    "prompt": "In your React app, import the Progress component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Resizable",
+    "section": "Usage",
+    "prompt": "In your React app, import the Resizable component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Resizable",
+    "section": "Examples → Vertical",
+    "prompt": "In a form where you need a vertical Resizable, use CampEdUI’s Resizable component with the 'vertical' variant. Include the import and the JSX markup for a standalone vertical Resizable."
+  },
+  {
+    "component": "Resizable",
+    "section": "Examples → Handle",
+    "prompt": "In a form where you need a handle Resizable, use CampEdUI’s Resizable component with the 'handle' variant. Include the import and the JSX markup for a standalone handle Resizable."
+  },
+  {
+    "component": "Scroll Area",
+    "section": "Usage",
+    "prompt": "In your React app, import the Scroll Area component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Scroll Area",
+    "section": "Examples → Horizontal Scrolling",
+    "prompt": "In a form where you need a horizontal scrolling Scroll Area, use CampEdUI’s Scroll Area component with the 'horizontal scrolling' variant. Include the import and the JSX markup for a standalone horizontal scrolling Scroll Area."
+  },
+  {
+    "component": "Separator",
+    "section": "Usage",
+    "prompt": "In your React app, import the Separator component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Skeleton",
+    "section": "Usage",
+    "prompt": "In your React app, import the Skeleton component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Slider",
+    "section": "Usage",
+    "prompt": "In your React app, import the Slider component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Stepper",
+    "section": "Usage",
+    "prompt": "In your React app, import the Stepper component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Stepper",
+    "section": "Examples → Default",
+    "prompt": "In a form where you need a default Stepper, use CampEdUI’s Stepper component with the 'default' variant. Include the import and the JSX markup for a standalone default Stepper."
+  },
+  {
+    "component": "Stepper",
+    "section": "Examples → Orientation",
+    "prompt": "In a form where you need a orientation Stepper, use CampEdUI’s Stepper component with the 'orientation' variant. Include the import and the JSX markup for a standalone orientation Stepper."
+  },
+  {
+    "component": "Stepper",
+    "section": "Examples → Description",
+    "prompt": "In a form where you need a description Stepper, use CampEdUI’s Stepper component with the 'description' variant. Include the import and the JSX markup for a standalone description Stepper."
+  },
+  {
+    "component": "Stepper",
+    "section": "Examples → Optional steps",
+    "prompt": "In a form where you need a optional steps Stepper, use CampEdUI’s Stepper component with the 'optional steps' variant. Include the import and the JSX markup for a standalone optional steps Stepper."
+  },
+  {
+    "component": "Stepper",
+    "section": "Examples → Variants",
+    "prompt": "In a form where you need a variants Stepper, use CampEdUI’s Stepper component with the 'variants' variant. Include the import and the JSX markup for a standalone variants Stepper."
+  },
+  {
+    "component": "Stepper",
+    "section": "Examples → Sizes",
+    "prompt": "In a form where you need a sizes Stepper, use CampEdUI’s Stepper component with the 'sizes' variant. Include the import and the JSX markup for a standalone sizes Stepper."
+  },
+  {
+    "component": "Stepper",
+    "section": "Examples → State",
+    "prompt": "In a form where you need a state Stepper, use CampEdUI’s Stepper component with the 'state' variant. Include the import and the JSX markup for a standalone state Stepper."
+  },
+  {
+    "component": "Stepper",
+    "section": "Examples → Custom Icons",
+    "prompt": "In a form where you need a custom icons Stepper, use CampEdUI’s Stepper component with the 'custom icons' variant. Include the import and the JSX markup for a standalone custom icons Stepper."
+  },
+  {
+    "component": "Stepper",
+    "section": "Examples → Clickable steps",
+    "prompt": "In a form where you need a clickable steps Stepper, use CampEdUI’s Stepper component with the 'clickable steps' variant. Include the import and the JSX markup for a standalone clickable steps Stepper."
+  },
+  {
+    "component": "Stepper",
+    "section": "Examples → Footer inside the step",
+    "prompt": "In a form where you need a footer inside the step Stepper, use CampEdUI’s Stepper component with the 'footer inside the step' variant. Include the import and the JSX markup for a standalone footer inside the step Stepper."
+  },
+  {
+    "component": "Stepper",
+    "section": "Examples → With Forms",
+    "prompt": "In a form where you need a with forms Stepper, use CampEdUI’s Stepper component with the 'with forms' variant. Include the import and the JSX markup for a standalone with forms Stepper."
+  },
+  {
+    "component": "Stepper",
+    "section": "Examples → Custom styles",
+    "prompt": "In a form where you need a custom styles Stepper, use CampEdUI’s Stepper component with the 'custom styles' variant. Include the import and the JSX markup for a standalone custom styles Stepper."
+  },
+  {
+    "component": "Stepper",
+    "section": "API → useStepper",
+    "prompt": "Create a Stepper example for the 'useStepper' scenario using CampEdUI. Include any necessary imports and the minimal JSX to render it."
+  },
+  {
+    "component": "Sticky Scroll Reveal",
+    "section": "Usage",
+    "prompt": "In your React app, import the Sticky Scroll Reveal component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Switch",
+    "section": "Usage",
+    "prompt": "In your React app, import the Switch component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Switch",
+    "section": "Examples → Form",
+    "prompt": "In a form where you need a form Switch, use CampEdUI’s Switch component with the 'form' variant. Include the import and the JSX markup for a standalone form Switch."
+  },
+  {
+    "component": "Table",
+    "section": "Usage",
+    "prompt": "In your React app, import the Table component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Tabs",
+    "section": "Usage",
+    "prompt": "In your React app, import the Tabs component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Toggle",
+    "section": "Usage",
+    "prompt": "In your React app, import the Toggle component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Toggle",
+    "section": "Examples → Default",
+    "prompt": "In a form where you need a default Toggle, use CampEdUI’s Toggle component with the 'default' variant. Include the import and the JSX markup for a standalone default Toggle."
+  },
+  {
+    "component": "Toggle",
+    "section": "Examples → Outline",
+    "prompt": "In a form where you need a outline Toggle, use CampEdUI’s Toggle component with the 'outline' variant. Include the import and the JSX markup for a standalone outline Toggle."
+  },
+  {
+    "component": "Toggle",
+    "section": "Examples → With Text",
+    "prompt": "In a form where you need a with text Toggle, use CampEdUI’s Toggle component with the 'with text' variant. Include the import and the JSX markup for a standalone with text Toggle."
+  },
+  {
+    "component": "Toggle",
+    "section": "Examples → Small",
+    "prompt": "In a form where you need a small Toggle, use CampEdUI’s Toggle component with the 'small' variant. Include the import and the JSX markup for a standalone small Toggle."
+  },
+  {
+    "component": "Toggle",
+    "section": "Examples → Large",
+    "prompt": "In a form where you need a large Toggle, use CampEdUI’s Toggle component with the 'large' variant. Include the import and the JSX markup for a standalone large Toggle."
+  },
+  {
+    "component": "Toggle",
+    "section": "Examples → Disabled",
+    "prompt": "In a form where you need a disabled Toggle, use CampEdUI’s Toggle component with the 'disabled' variant. Include the import and the JSX markup for a standalone disabled Toggle."
+  },
+  {
+    "component": "Toggle Group",
+    "section": "Usage",
+    "prompt": "In your React app, import the Toggle Group component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Toggle Group",
+    "section": "Examples → Default",
+    "prompt": "In a form where you need a default Toggle Group, use CampEdUI’s Toggle Group component with the 'default' variant. Include the import and the JSX markup for a standalone default Toggle Group."
+  },
+  {
+    "component": "Toggle Group",
+    "section": "Examples → Outline",
+    "prompt": "In a form where you need a outline Toggle Group, use CampEdUI’s Toggle Group component with the 'outline' variant. Include the import and the JSX markup for a standalone outline Toggle Group."
+  },
+  {
+    "component": "Toggle Group",
+    "section": "Examples → Single",
+    "prompt": "In a form where you need a single Toggle Group, use CampEdUI’s Toggle Group component with the 'single' variant. Include the import and the JSX markup for a standalone single Toggle Group."
+  },
+  {
+    "component": "Toggle Group",
+    "section": "Examples → Small",
+    "prompt": "In a form where you need a small Toggle Group, use CampEdUI’s Toggle Group component with the 'small' variant. Include the import and the JSX markup for a standalone small Toggle Group."
+  },
+  {
+    "component": "Toggle Group",
+    "section": "Examples → Large",
+    "prompt": "In a form where you need a large Toggle Group, use CampEdUI’s Toggle Group component with the 'large' variant. Include the import and the JSX markup for a standalone large Toggle Group."
+  },
+  {
+    "component": "Toggle Group",
+    "section": "Examples → Disabled",
+    "prompt": "In a form where you need a disabled Toggle Group, use CampEdUI’s Toggle Group component with the 'disabled' variant. Include the import and the JSX markup for a standalone disabled Toggle Group."
+  },
+  {
+    "component": "Tooltip",
+    "section": "Usage",
+    "prompt": "In your React app, import the Tooltip component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Tree View",
+    "section": "Usage",
+    "prompt": "In your React app, import the Tree View component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Tree View",
+    "section": "Examples → Default",
+    "prompt": "In a form where you need a default Tree View, use CampEdUI’s Tree View component with the 'default' variant. Include the import and the JSX markup for a standalone default Tree View."
+  },
+  {
+    "component": "Tree View",
+    "section": "Examples → With Build-in select",
+    "prompt": "In a form where you need a with build-in select Tree View, use CampEdUI’s Tree View component with the 'with build-in select' variant. Include the import and the JSX markup for a standalone with build-in select Tree View."
+  },
+  {
+    "component": "Tree View",
+    "section": "Examples → With Build-in expand",
+    "prompt": "In a form where you need a with build-in expand Tree View, use CampEdUI’s Tree View component with the 'with build-in expand' variant. Include the import and the JSX markup for a standalone with build-in expand Tree View."
+  },
+  {
+    "component": "Input",
+    "section": "Usage",
+    "prompt": "In your React app, import the Input component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Input",
+    "section": "Examples → Default",
+    "prompt": "In a form where you need a default Input, use CampEdUI’s Input component with the 'default' variant. Include the import and the JSX markup for a standalone default Input."
+  },
+  {
+    "component": "Input",
+    "section": "Examples → File",
+    "prompt": "In a form where you need a file Input, use CampEdUI’s Input component with the 'file' variant. Include the import and the JSX markup for a standalone file Input."
+  },
+  {
+    "component": "Input",
+    "section": "Examples → Disabled",
+    "prompt": "In a form where you need a disabled Input, use CampEdUI’s Input component with the 'disabled' variant. Include the import and the JSX markup for a standalone disabled Input."
+  },
+  {
+    "component": "Input",
+    "section": "Examples → With Label",
+    "prompt": "In a form where you need a with label Input, use CampEdUI’s Input component with the 'with label' variant. Include the import and the JSX markup for a standalone with label Input."
+  },
+  {
+    "component": "Input",
+    "section": "Examples → With Button",
+    "prompt": "In a form where you need a with button Input, use CampEdUI’s Input component with the 'with button' variant. Include the import and the JSX markup for a standalone with button Input."
+  },
+  {
+    "component": "Input",
+    "section": "Examples → Form",
+    "prompt": "In a form where you need a form Input, use CampEdUI’s Input component with the 'form' variant. Include the import and the JSX markup for a standalone form Input."
+  },
+  {
+    "component": "Input OTP",
+    "section": "Usage",
+    "prompt": "In your React app, import the Input OTP component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Input OTP",
+    "section": "Examples → Pattern",
+    "prompt": "In a form where you need a pattern Input OTP, use CampEdUI’s Input OTP component with the 'pattern' variant. Include the import and the JSX markup for a standalone pattern Input OTP."
+  },
+  {
+    "component": "Input OTP",
+    "section": "Examples → Separator",
+    "prompt": "In a form where you need a separator Input OTP, use CampEdUI’s Input OTP component with the 'separator' variant. Include the import and the JSX markup for a standalone separator Input OTP."
+  },
+  {
+    "component": "Input OTP",
+    "section": "Examples → Controlled",
+    "prompt": "In a form where you need a controlled Input OTP, use CampEdUI’s Input OTP component with the 'controlled' variant. Include the import and the JSX markup for a standalone controlled Input OTP."
+  },
+  {
+    "component": "Input OTP",
+    "section": "Examples → Toggle",
+    "prompt": "In a form where you need a toggle Input OTP, use CampEdUI’s Input OTP component with the 'toggle' variant. Include the import and the JSX markup for a standalone toggle Input OTP."
+  },
+  {
+    "component": "Input OTP",
+    "section": "Examples → Form",
+    "prompt": "In a form where you need a form Input OTP, use CampEdUI’s Input OTP component with the 'form' variant. Include the import and the JSX markup for a standalone form Input OTP."
+  },
+  {
+    "component": "Password Input",
+    "section": "Usage",
+    "prompt": "In your React app, import the Password Input component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Password Input",
+    "section": "Examples → Default",
+    "prompt": "In a form where you need a default Password Input, use CampEdUI’s Password Input component with the 'default' variant. Include the import and the JSX markup for a standalone default Password Input."
+  },
+  {
+    "component": "Multi Select",
+    "section": "Usage",
+    "prompt": "In your React app, import the Multi Select component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Multi Select",
+    "section": "Examples → Default",
+    "prompt": "In a form where you need a default Multi Select, use CampEdUI’s Multi Select component with the 'default' variant. Include the import and the JSX markup for a standalone default Multi Select."
+  },
+  {
+    "component": "Multi Select",
+    "section": "Examples → Multi-Select with Limit",
+    "prompt": "In a form where you need a multi-select with limit Multi Select, use CampEdUI’s Multi Select component with the 'multi-select with limit' variant. Include the import and the JSX markup for a standalone multi-select with limit Multi Select."
+  },
+  {
+    "component": "Multi Select",
+    "section": "Examples → Form",
+    "prompt": "In a form where you need a form Multi Select, use CampEdUI’s Multi Select component with the 'form' variant. Include the import and the JSX markup for a standalone form Multi Select."
+  },
+  {
+    "component": "Select",
+    "section": "Usage",
+    "prompt": "In your React app, import the Select component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Select",
+    "section": "Examples → Scrollable",
+    "prompt": "In a form where you need a scrollable Select, use CampEdUI’s Select component with the 'scrollable' variant. Include the import and the JSX markup for a standalone scrollable Select."
+  },
+  {
+    "component": "Select",
+    "section": "Examples → Form",
+    "prompt": "In a form where you need a form Select, use CampEdUI’s Select component with the 'form' variant. Include the import and the JSX markup for a standalone form Select."
+  },
+  {
+    "component": "Textarea",
+    "section": "Usage",
+    "prompt": "In your React app, import the Textarea component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Textarea",
+    "section": "Examples → Default",
+    "prompt": "In a form where you need a default Textarea, use CampEdUI’s Textarea component with the 'default' variant. Include the import and the JSX markup for a standalone default Textarea."
+  },
+  {
+    "component": "Textarea",
+    "section": "Examples → Disabled",
+    "prompt": "In a form where you need a disabled Textarea, use CampEdUI’s Textarea component with the 'disabled' variant. Include the import and the JSX markup for a standalone disabled Textarea."
+  },
+  {
+    "component": "Textarea",
+    "section": "Examples → With Label",
+    "prompt": "In a form where you need a with label Textarea, use CampEdUI’s Textarea component with the 'with label' variant. Include the import and the JSX markup for a standalone with label Textarea."
+  },
+  {
+    "component": "Textarea",
+    "section": "Examples → With Text",
+    "prompt": "In a form where you need a with text Textarea, use CampEdUI’s Textarea component with the 'with text' variant. Include the import and the JSX markup for a standalone with text Textarea."
+  },
+  {
+    "component": "Textarea",
+    "section": "Examples → With Button",
+    "prompt": "In a form where you need a with button Textarea, use CampEdUI’s Textarea component with the 'with button' variant. Include the import and the JSX markup for a standalone with button Textarea."
+  },
+  {
+    "component": "Textarea",
+    "section": "Examples → Form",
+    "prompt": "In a form where you need a form Textarea, use CampEdUI’s Textarea component with the 'form' variant. Include the import and the JSX markup for a standalone form Textarea."
+  },
+  {
+    "component": "Tag Input",
+    "section": "Usage",
+    "prompt": "In your React app, import the Tag Input component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Tag Input",
+    "section": "Examples → Variant",
+    "prompt": "In a form where you need a variant Tag Input, use CampEdUI’s Tag Input component with the 'variant' variant. Include the import and the JSX markup for a standalone variant Tag Input."
+  },
+  {
+    "component": "Tag Input",
+    "section": "Examples → Animation",
+    "prompt": "In a form where you need a animation Tag Input, use CampEdUI’s Tag Input component with the 'animation' variant. Include the import and the JSX markup for a standalone animation Tag Input."
+  },
+  {
+    "component": "Tag Input",
+    "section": "Examples → Border",
+    "prompt": "In a form where you need a border Tag Input, use CampEdUI’s Tag Input component with the 'border' variant. Include the import and the JSX markup for a standalone border Tag Input."
+  },
+  {
+    "component": "Tag Input",
+    "section": "Examples → Interaction",
+    "prompt": "In a form where you need a interaction Tag Input, use CampEdUI’s Tag Input component with the 'interaction' variant. Include the import and the JSX markup for a standalone interaction Tag Input."
+  },
+  {
+    "component": "Tag Input",
+    "section": "Examples → Shape",
+    "prompt": "In a form where you need a shape Tag Input, use CampEdUI’s Tag Input component with the 'shape' variant. Include the import and the JSX markup for a standalone shape Tag Input."
+  },
+  {
+    "component": "Tag Input",
+    "section": "Examples → Size",
+    "prompt": "In a form where you need a size Tag Input, use CampEdUI’s Tag Input component with the 'size' variant. Include the import and the JSX markup for a standalone size Tag Input."
+  },
+  {
+    "component": "Tag Input",
+    "section": "Examples → TextCase",
+    "prompt": "In a form where you need a textcase Tag Input, use CampEdUI’s Tag Input component with the 'textcase' variant. Include the import and the JSX markup for a standalone textcase Tag Input."
+  },
+  {
+    "component": "Tag Input",
+    "section": "Examples → TextStyles",
+    "prompt": "In a form where you need a textstyles Tag Input, use CampEdUI’s Tag Input component with the 'textstyles' variant. Include the import and the JSX markup for a standalone textstyles Tag Input."
+  },
+  {
+    "component": "Tag Input",
+    "section": "Props → Autocomplete",
+    "prompt": "Create a Tag Input example for the 'Autocomplete' scenario using CampEdUI. Include any necessary imports and the minimal JSX to render it."
+  },
+  {
+    "component": "Tag Input",
+    "section": "Props → Max Tag",
+    "prompt": "Create a Tag Input example for the 'Max Tag' scenario using CampEdUI. Include any necessary imports and the minimal JSX to render it."
+  },
+  {
+    "component": "Tag Input",
+    "section": "Props → Custom tag render",
+    "prompt": "Create a Tag Input example for the 'Custom tag render' scenario using CampEdUI. Include any necessary imports and the minimal JSX to render it."
+  },
+  {
+    "component": "Tag Input",
+    "section": "Props → Truncate tag",
+    "prompt": "Create a Tag Input example for the 'Truncate tag' scenario using CampEdUI. Include any necessary imports and the minimal JSX to render it."
+  },
+  {
+    "component": "Tag Input",
+    "section": "Props → Clear all tags",
+    "prompt": "Create a Tag Input example for the 'Clear all tags' scenario using CampEdUI. Include any necessary imports and the minimal JSX to render it."
+  },
+  {
+    "component": "Tag Input",
+    "section": "Props → Draggable",
+    "prompt": "Create a Tag Input example for the 'Draggable' scenario using CampEdUI. Include any necessary imports and the minimal JSX to render it."
+  },
+  {
+    "component": "Tag Input",
+    "section": "Props → Tag Popover",
+    "prompt": "Create a Tag Input example for the 'Tag Popover' scenario using CampEdUI. Include any necessary imports and the minimal JSX to render it."
+  },
+  {
+    "component": "Tag Input",
+    "section": "Props → Allow Duplicate tags",
+    "prompt": "Create a Tag Input example for the 'Allow Duplicate tags' scenario using CampEdUI. Include any necessary imports and the minimal JSX to render it."
+  },
+  {
+    "component": "Tag Input",
+    "section": "Props → Direction tags",
+    "prompt": "Create a Tag Input example for the 'Direction tags' scenario using CampEdUI. Include any necessary imports and the minimal JSX to render it."
+  },
+  {
+    "component": "Tag Input",
+    "section": "Props → Input field position",
+    "prompt": "Create a Tag Input example for the 'Input field position' scenario using CampEdUI. Include any necessary imports and the minimal JSX to render it."
+  },
+  {
+    "component": "Calendar",
+    "section": "Usage",
+    "prompt": "In your React app, import the Calendar component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Calendar",
+    "section": "Examples → Form",
+    "prompt": "In a form where you need a form Calendar, use CampEdUI’s Calendar component with the 'form' variant. Include the import and the JSX markup for a standalone form Calendar."
+  },
+  {
+    "component": "Checkbox",
+    "section": "Usage",
+    "prompt": "In your React app, import the Checkbox component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Checkbox",
+    "section": "Examples → With text",
+    "prompt": "In a form where you need a with text Checkbox, use CampEdUI’s Checkbox component with the 'with text' variant. Include the import and the JSX markup for a standalone with text Checkbox."
+  },
+  {
+    "component": "Checkbox",
+    "section": "Examples → Disabled",
+    "prompt": "In a form where you need a disabled Checkbox, use CampEdUI’s Checkbox component with the 'disabled' variant. Include the import and the JSX markup for a standalone disabled Checkbox."
+  },
+  {
+    "component": "Checkbox",
+    "section": "Examples → Form",
+    "prompt": "In a form where you need a form Checkbox, use CampEdUI’s Checkbox component with the 'form' variant. Include the import and the JSX markup for a standalone form Checkbox."
+  },
+  {
+    "component": "Combobox",
+    "section": "Usage",
+    "prompt": "In your React app, import the Combobox component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Combobox",
+    "section": "Examples → Combobox",
+    "prompt": "In a form where you need a combobox Combobox, use CampEdUI’s Combobox component with the 'combobox' variant. Include the import and the JSX markup for a standalone combobox Combobox."
+  },
+  {
+    "component": "Combobox",
+    "section": "Examples → Popover",
+    "prompt": "In a form where you need a popover Combobox, use CampEdUI’s Combobox component with the 'popover' variant. Include the import and the JSX markup for a standalone popover Combobox."
+  },
+  {
+    "component": "Combobox",
+    "section": "Examples → Dropdown menu",
+    "prompt": "In a form where you need a dropdown menu Combobox, use CampEdUI’s Combobox component with the 'dropdown menu' variant. Include the import and the JSX markup for a standalone dropdown menu Combobox."
+  },
+  {
+    "component": "Combobox",
+    "section": "Examples → Form",
+    "prompt": "In a form where you need a form Combobox, use CampEdUI’s Combobox component with the 'form' variant. Include the import and the JSX markup for a standalone form Combobox."
+  },
+  {
+    "component": "Date Picker",
+    "section": "Usage",
+    "prompt": "In your React app, import the Date Picker component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Date Picker",
+    "section": "Examples → Date Picker",
+    "prompt": "In a form where you need a date picker Date Picker, use CampEdUI’s Date Picker component with the 'date picker' variant. Include the import and the JSX markup for a standalone date picker Date Picker."
+  },
+  {
+    "component": "Date Picker",
+    "section": "Examples → Date Range Picker",
+    "prompt": "In a form where you need a date range picker Date Picker, use CampEdUI’s Date Picker component with the 'date range picker' variant. Include the import and the JSX markup for a standalone date range picker Date Picker."
+  },
+  {
+    "component": "Date Picker",
+    "section": "Examples → With Presets",
+    "prompt": "In a form where you need a with presets Date Picker, use CampEdUI’s Date Picker component with the 'with presets' variant. Include the import and the JSX markup for a standalone with presets Date Picker."
+  },
+  {
+    "component": "Date Picker",
+    "section": "Examples → Form",
+    "prompt": "In a form where you need a form Date Picker, use CampEdUI’s Date Picker component with the 'form' variant. Include the import and the JSX markup for a standalone form Date Picker."
+  },
+  {
+    "component": "Radio Group",
+    "section": "Usage",
+    "prompt": "In your React app, import the Radio Group component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Radio Group",
+    "section": "Examples → Form",
+    "prompt": "In a form where you need a form Radio Group, use CampEdUI’s Radio Group component with the 'form' variant. Include the import and the JSX markup for a standalone form Radio Group."
+  },
+  {
+    "component": "Text",
+    "section": "Usage",
+    "prompt": "In your React app, import the Text component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Text",
+    "section": "Usage",
+    "prompt": "In your React app, import the Text component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Typewriter Effect",
+    "section": "Usage",
+    "prompt": "In your React app, import the Typewriter Effect component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Typewriter Effect",
+    "section": "Examples → Default",
+    "prompt": "In a form where you need a default Typewriter Effect, use CampEdUI’s Typewriter Effect component with the 'default' variant. Include the import and the JSX markup for a standalone default Typewriter Effect."
+  },
+  {
+    "component": "Typewriter Effect",
+    "section": "Examples → Smooth animation",
+    "prompt": "In a form where you need a smooth animation Typewriter Effect, use CampEdUI’s Typewriter Effect component with the 'smooth animation' variant. Include the import and the JSX markup for a standalone smooth animation Typewriter Effect."
+  },
+  {
+    "component": "Alert Dialog",
+    "section": "Usage",
+    "prompt": "In your React app, import the Alert Dialog component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Sheet",
+    "section": "Installation → Usage",
+    "prompt": "Create a Sheet example for the 'Usage' scenario using CampEdUI. Include any necessary imports and the minimal JSX to render it."
+  },
+  {
+    "component": "Sheet",
+    "section": "Examples → Side",
+    "prompt": "In a form where you need a side Sheet, use CampEdUI’s Sheet component with the 'side' variant. Include the import and the JSX markup for a standalone side Sheet."
+  },
+  {
+    "component": "Sheet",
+    "section": "Examples → Size",
+    "prompt": "In a form where you need a size Sheet, use CampEdUI’s Sheet component with the 'size' variant. Include the import and the JSX markup for a standalone size Sheet."
+  },
+  {
+    "component": "Popover",
+    "section": "Usage",
+    "prompt": "In your React app, import the Popover component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Dialog",
+    "section": "Usage",
+    "prompt": "In your React app, import the Dialog component from CampEdUI and render it using the default styling as shown in the usage example."
+  },
+  {
+    "component": "Dialog",
+    "section": "Examples → Custom close button",
+    "prompt": "In a form where you need a custom close button Dialog, use CampEdUI’s Dialog component with the 'custom close button' variant. Include the import and the JSX markup for a standalone custom close button Dialog."
+  }
+]

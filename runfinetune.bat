@@ -1,0 +1,17 @@
+python campedui-codegen/finetune.py ^
+  --train_file "campedui-codegen/train_prompts.json" ^
+  --val_file "campedui-codegen/val_prompts.json" ^
+  --output_dir "output" ^
+  --model_name_or_path "Salesforce/codet5p-220m" ^
+  --num_train_epochs 3 ^
+  --per_device_train_batch_size 4 ^
+  --per_device_eval_batch_size 4 ^
+  --gradient_accumulation_steps 2 ^
+  --learning_rate 5e-5 ^
+  --weight_decay 0.01 ^
+  --warmup_steps 100 ^
+  --logging_steps 50 ^
+  --eval_steps 100 ^
+  --max_seq_length 512 ^
+  --seed 42 ^
+  --fp16
